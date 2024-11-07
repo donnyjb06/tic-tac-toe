@@ -1,27 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TicTacToe</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TicTacToe</title>
 
-  <link rel="stylesheet" href="./styles/dist/main.css">
-</head>
-<body>
+        <link rel="stylesheet" href="./styles/dist/main.css" />
+    </head>
+    <body>
+        <main class="game">
+          <p class="game__turn"> Turn</p>
 
-  <div class="gradients">
+            <div class="summary">
+              <div class="summary__stat-container summary__stat-container_player-x">
+                <p class="summary__count summary__count_type_x">0</p>
+              </div>
+              <div class="summary__stat-container summary__stat-container_ties">
+                <p class="summary__count summary__count_type_ties">0</p>
+              </div>
+              <div class="summary__stat-container summary__stat-container_player-o">
+                <p class="summary__count summary__count_type_o">0</p>
+              </div>
+            </div>
 
-    <div class="gradients__container">
+            <div class="board">
+                <button class="board__cell">1</button
+                ><button class="board__cell">2</button
+                ><button class="board__cell">3</button
+                ><button class="board__cell">4</button
+                ><button class="board__cell">5</button
+                ><button class="board__cell">6</button
+                ><button class="board__cell">7</button
+                ><button class="board__cell">8</button
+                ><button class="board__cell">9</button>
+            </div>
 
-      <div class="gradients__gradient gradients__gradient_g_1"></div>
-      <div class="gradients__gradient gradients__gradient_g_2"></div>
-      <div class="gradients__gradient gradients__gradient_g_3"></div>
-      <div class="gradients__gradient gradients__gradient_g_4"></div>
-      <div class="gradients__gradient gradients__gradient_g_5"></div>
-      <div class="gradients__gradient gradients__gradient_g_interactive"></div>
-    </div>
-  </div>
+            <div class="game__controls">
+                <button class="game__reset">Reset</button>
+            </div>
+        </main>
 
-  <script src="app.js"></script>
-</body>
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+
+        <div class="gradients">
+            <div class="gradients__container">
+                <div class="gradients__gradient gradients__gradient_g_1"></div>
+                <div class="gradients__gradient gradients__gradient_g_2"></div>
+                <div class="gradients__gradient gradients__gradient_g_3"></div>
+                <div class="gradients__gradient gradients__gradient_g_4"></div>
+                <div class="gradients__gradient gradients__gradient_g_5"></div>
+                <div
+                    class="gradients__gradient gradients__gradient_g_interactive"
+                ></div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
 </html>

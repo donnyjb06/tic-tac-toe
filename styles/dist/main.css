@@ -45,7 +45,7 @@
   --color3: 176, 224, 230;
   --color4: 255, 218, 185;
   --color5: 220, 208, 255;
-  --color-interactive: 248, 153, 216;
+  --color-interactive: 98, 255, 150;
   --circle-size: 80%;
   --blending: hard-light;
   width: 100vw;
@@ -116,4 +116,42 @@
 }
 .gradients svg {
   display: none;
+}
+
+html,
+body {
+  cursor: none;
+}
+
+* {
+  cursor: none;
+}
+
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  transition: width 0.15s ease-out, height 0.15s ease-out;
+}
+
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #000;
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cursor-dot.active {
+  width: 15px;
+  height: 15px;
 }
