@@ -1,1 +1,9 @@
-@import "./components/reset", "./components/background", "./components/cursor";
+@use "./components/variables";
+
+@import "./components/reset", "./components/fonts", "./components/background",
+    "./components/cursor", "./components/game", "./components/header";
+
+body {
+    font-family: "Fredoka";
+    color: variables.$font-color;
+}

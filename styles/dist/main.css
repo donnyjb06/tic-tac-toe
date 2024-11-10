@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "FredokaOne";
+  src: url("../../assets/fonts/FredokaOne-Regular.ttf") format("treutype");
+  font-weight: normal;
+  font-style: normal;
+}
 @keyframes move-in-circle {
   0% {
     transform: rotate(0deg);
@@ -154,4 +160,60 @@ body {
 .cursor-dot.active {
   width: 15px;
   height: 15px;
+}
+
+.game {
+  max-width: 1440px;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    opacity: 1;
+    scale: 1;
+    filter: blur(0);
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: 0.8;
+    scale: 1.1;
+    filter: blur(0.2px);
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+    filter: blur(0);
+    transform: rotate(720deg);
+  }
+}
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: 52px;
+  gap: 444px;
+}
+.header .header__title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.header .header__reset-btn {
+  background-color: rgba(217, 217, 217, 0.32);
+  -webkit-backdrop-filter: blur(17.6px);
+          backdrop-filter: blur(17.6px);
+  border: none;
+  box-shadow: 0 4px 8.2px rgba(0, 0, 0, 0.13);
+  border-radius: 13px;
+  padding: 11px;
+  display: flex;
+}
+.header .header__reset-btn .header__reset-icon {
+  margin: auto;
+}
+.header .header__reset-btn .header__reset-icon.animate-spin {
+  animation: spin 1.5s cubic-bezier(0.15, -0.01, 0, 1.01);
+}
+
+body {
+  font-family: "Fredoka";
+  color: #6d6969;
 }

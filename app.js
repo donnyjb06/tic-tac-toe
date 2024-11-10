@@ -31,16 +31,16 @@ const cursorDot = document.querySelector(".cursor-dot");
 const cursorOutline = document.querySelector(".cursor-outline");
 
 // Hides Custom Cursor when Cursor Leaves Document
-document.addEventListener("mouseleave", ()=> {
+document.addEventListener("mouseleave", () => {
     cursorDot.style.display = "none";
     cursorOutline.style.display = "none";
-})
+});
 
 // Displays Custom Cursor when Cursor Re-Enters Document
-document.addEventListener("mouseenter", ()=> {
+document.addEventListener("mouseenter", () => {
     cursorDot.style.display = "block";
     cursorOutline.style.display = "block";
-})
+});
 
 window.addEventListener("mousemove", (event) => {
     curX = event.clientX;
@@ -52,16 +52,32 @@ window.addEventListener("mousemove", (event) => {
     // cursorOutline.style.left = `${curX}px`;
     // cursorOutline.style.top = `${curY}px`;
 
-    cursorOutline.animate({
-        left: `${curX}px`,
-        top: `${curY}px`
-    }, {duration: 500, fill: "forwards"});
+    cursorOutline.animate(
+        {
+            left: `${curX}px`,
+            top: `${curY}px`,
+        },
+        { duration: 500, fill: "forwards" }
+    );
 });
 
-document.addEventListener("mousedown", ()=> {
+document.addEventListener("mousedown", () => {
     cursorDot.classList.add("active");
 });
 
 document.addEventListener("mouseup", () => {
     cursorDot.classList.remove("active");
-})
+});
+
+// Adds and Removes Animation from Reset Button Icon when Clicked
+const resetBtnIcon = document.querySelector(".header__reset-icon");
+
+const resetBtn = document
+    .querySelector(".header__reset-btn")
+    .addEventListener("click", () => {
+        resetBtnIcon.classList.add("animate-spin");
+
+        setTimeout(() => {
+            resetBtnIcon.classList.remove("animate-spin");
+        }, 1500);
+    });

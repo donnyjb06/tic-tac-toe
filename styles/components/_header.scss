@@ -1,0 +1,29 @@
+@use "./variables";
+@use "./mixins";
+@import "./animation";
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin-top: 52px;
+    gap: 444px;
+
+    .header__title {
+        font-size: variables.$header-size;
+        font-weight: bold;
+    }
+
+    .header__reset-btn {
+        @include mixins.floating-btn;
+        padding: 11px;
+        display: flex;
+
+        .header__reset-icon {
+            margin: auto;
+
+            &.animate-spin {
+                animation: spin 1.5s cubic-bezier(0.15, -0.01, 0, 1.01);
+            }
+        }
+    }
+}
