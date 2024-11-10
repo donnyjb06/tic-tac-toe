@@ -6,22 +6,24 @@
         <title>TicTacToe</title>
 
         <link rel="stylesheet" href="./styles/dist/main.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@100.1,300..700&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <main class="game">
-          <p class="game__turn"> Turn</p>
+            <header class="header">
+                <h1 class="header__title">TIC TAC TOE</h1>
+                <button class="header__reset-btn">
+                  <img src="./assets/images/reset-icon.svg" alt="Reset Button Icon" class="header__reset-icon">
+                </button>
+            </header>
 
-            <div class="summary">
-              <div class="summary__stat-container summary__stat-container_player-x">
-                <p class="summary__count summary__count_type_x">0</p>
-              </div>
-              <div class="summary__stat-container summary__stat-container_ties">
-                <p class="summary__count summary__count_type_ties">0</p>
-              </div>
-              <div class="summary__stat-container summary__stat-container_player-o">
-                <p class="summary__count summary__count_type_o">0</p>
-              </div>
-            </div>
+            <p class="game__turn">Turn</p>
 
             <div class="board">
                 <button class="board__cell">1</button
@@ -35,8 +37,22 @@
                 ><button class="board__cell">9</button>
             </div>
 
-            <div class="game__controls">
-                <button class="game__reset">Reset</button>
+            <div class="summary">
+                <div
+                    class="summary__stat-container summary__stat-container_player-x"
+                >
+                    <p class="summary__count summary__count_type_x">0</p>
+                </div>
+                <div
+                    class="summary__stat-container summary__stat-container_ties"
+                >
+                    <p class="summary__count summary__count_type_ties">0</p>
+                </div>
+                <div
+                    class="summary__stat-container summary__stat-container_player-o"
+                >
+                    <p class="summary__count summary__count_type_o">0</p>
+                </div>
             </div>
         </main>
 
