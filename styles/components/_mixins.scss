@@ -1,0 +1,9 @@
+@use "./variables";
+
+@mixin floating-btn {
+  background-color: variables.$btn-bg-color;
+  backdrop-filter: blur(17.6px);
+  border: none;
+  box-shadow: variables.$box-shadow;
+  border-radius: variables.$border-radius;
+}
